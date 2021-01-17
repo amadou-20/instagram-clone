@@ -12,7 +12,7 @@ function App() {
            <img 
              className="app_headerImage"
              alt="abc" 
-             src="https://e7.pngegg.com/pngimages/712/1009/png-clipart-letter-instagram-font-instagram-text-logo.png"
+             src="https://ih1.redbubble.net/image.366666424.5206/st,small,507x507-pad,600x600,f8f8f8.u3.jpg"
             />
         </div>
 
