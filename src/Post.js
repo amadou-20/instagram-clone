@@ -10,7 +10,7 @@ function Post() {
             <h1>Username</h1>
             <img 
             className="post_image"
-            src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_960_720.jpg"
+            src="https://cdn.pixabay.com/photo/2016/02/19/17/43/follow-1210793_960_720.png"
             alt="abc"
             />
             <h4>Username: caption</h4>
