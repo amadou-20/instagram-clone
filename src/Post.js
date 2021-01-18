@@ -13,7 +13,7 @@ function Post() {
            alt="john"
            src="https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_960_720.png"
            />
-            <h1>Username</h1>
+            <h4>Username</h4>
             </div>
             <img 
             className="post_image"

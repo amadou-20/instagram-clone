@@ -15,7 +15,7 @@ function App() {
              src="https://cdn.pixabay.com/photo/2016/08/15/01/29/instagram-1594387_960_720.png"
             />
         </div>
-
+        <h1>let's build a instagram clone here</h1>
         <Post />
     </div>
   );
