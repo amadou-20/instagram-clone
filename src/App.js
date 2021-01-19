@@ -16,7 +16,7 @@ function App() {
             />
         </div>
         <h1>let's build a instagram clone here clever programmer</h1>
-        <p>instagram clone here clever programmer</p>
+        <a href=""> <p>instagram clone here clever programmer</p></a>
         <Post />
     </div>
   );
