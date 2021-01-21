@@ -2,7 +2,6 @@ import React from "react";
 import './App.css';
 import Post from "./Post";
 
-
 function App() {
 
 
@@ -17,6 +16,10 @@ function App() {
         </div>
         <h1>let's build a instagram clone here clever programmer</h1>
         <a href=""> <p>instagram clone here clever programmer</p></a>
+        <li>instagram clone here clever programmer</li>
+
+        <Post />
+        <Post />
         <Post />
     </div>
   );
