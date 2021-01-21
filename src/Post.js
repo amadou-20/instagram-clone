@@ -3,7 +3,7 @@ import "./Post.css";
 import { Avatar } from '@material-ui/core';
 
 
-function Post() {
+function Post({ username, caption, imageUrl }) {
 
     return (
         <div className="post">
@@ -13,7 +13,7 @@ function Post() {
            alt="john"
            src="https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_960_720.png"
            />
-            <h4>Username</h4>
+            <h3>{username}</h3>
             </div>
             <img 
             className="post_image"
