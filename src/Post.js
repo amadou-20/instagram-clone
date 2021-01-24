@@ -15,12 +15,9 @@ function Post({ username, caption, imageUrl }) {
            />
             <h3>{username}</h3>
             </div>
-            <img 
-            className="post_image"
-            src="https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png"
-            alt="abc"
-            />
-            <h4 className="post_text">Username: caption</h4>         
+            <img className="post_image" src={imageUrl} alt="abc" />
+
+            <h4 className="post_text"> <strong>{username}</strong> {caption} </h4>         
         </div>
     );
 }
