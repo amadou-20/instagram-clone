@@ -5,16 +5,16 @@ import Post from "./Post";
 function App() {
      const [posts, setPosts] = useState([
        {
-        username="Qazi",
-        caption="WOW it works",
-        imageUrl="https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png"
+        username: "Qazi",
+        caption: "WOW it works",
+        imageUrl: "https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png"
        },
 
        {
-        username="Qazi",
-        caption="WOW it works",
-        imageUrl="https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png"
-       },
+        username: "Jonathan", 
+        caption: "Hello world", 
+        imageUrl: "https://cdn.pixabay.com/photo/2020/10/09/19/39/utah-5641320_960_720.jpg"
+       }
 
      ]);
 
@@ -31,10 +31,9 @@ function App() {
 
         {
           posts.map(post =>  (
-           <Post username={post.username} caption={post.caption imageUrl={post.imageUrl} />
+           <Post username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
           ))
         }
-        
 
         <Post username="Qazi" caption="WOW it works" imageUrl="https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png" />
         <Post username="Jonathan" caption="Hello world" imageUrl="https://cdn.pixabay.com/photo/2020/10/09/19/39/utah-5641320_960_720.jpg" />
