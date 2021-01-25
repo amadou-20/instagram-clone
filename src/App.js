@@ -37,10 +37,15 @@ function App() {
         <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
+        
       >
-        {body}
+        <div style={modalStyle} className={classes.paper}>
+      <h2 id="simple-modal-title">I am a modal</h2>
+      <p id="simple-modal-description">
+        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+      </p>
+      <SimpleModal />
+    </div>
       </Modal>
         <div className="app_header">
            <img 
