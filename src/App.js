@@ -44,8 +44,8 @@ function App() {
         <h1>let's build a instagram clone here clever programmers</h1>
 
         {
-          posts.map(post =>  (
-           <Post username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
+          posts.map( ({id,post}) => (
+           <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
           ))
         }
 
