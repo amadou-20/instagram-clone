@@ -22,7 +22,13 @@ function App() {
      useEffect(() => {
        
      db.collection('posts').onSnapshot(snapshot => {
-       // every time a new post is added, this code firebase... 
+
+       // every time a new post is added, this code firebase...
+       setPosts(snapshot.docs.map(doc => ({
+         
+        id: doc.id,
+        post: doc.data()
+      })));
      })
      }, [input])
 
