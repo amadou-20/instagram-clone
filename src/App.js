@@ -1,6 +1,8 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 import Post from "./Post";
+import { db } from "./firebase";
+
 
 function App() {
      const [posts, setPosts] = useState([
@@ -15,8 +17,14 @@ function App() {
         caption: "Hello world", 
         imageUrl: "https://cdn.pixabay.com/photo/2020/10/09/19/39/utah-5641320_960_720.jpg"
        }
-
      ]);
+
+     useEffect(() => {
+       
+     db.collection('posts').onSnapshot(snapshot => {
+       // every time a new post is added, this code firebase... 
+     })
+     }, [input])
 
   return (
     <div className="App">
