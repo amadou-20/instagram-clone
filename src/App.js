@@ -5,6 +5,7 @@ import { db } from "./firebase";
 
 
 function App() {
+     const [open, setopen] = useState(false);
      const [posts, setPosts] = useState([
        {
         username: "Qazi",
@@ -36,8 +37,7 @@ function App() {
     <div className="App">
         <Modal
         open={open}
-        onClose={handleClose}
-        
+        onClose={handleClose}  
       >
         <div style={modalStyle} className={classes.paper}>
       <h2 id="simple-modal-title">I am a modal</h2>
