@@ -40,13 +40,10 @@ function App() {
         onClose={handleClose}  
       >
         <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">I am a modal</h2>
-      <p id="simple-modal-description">
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-      </p>
-      <SimpleModal />
+      <h2>I am a modal</h2>
     </div>
       </Modal>
+
         <div className="app_header">
            <img 
              className="app_headerImage"
