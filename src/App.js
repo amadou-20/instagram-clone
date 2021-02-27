@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Post from "./Post";
 import { db } from "./firebase";
+import { makeStyles } from '@material-ui/core/styles';
+import { Modal } from '@material-ui/core';
 
 
 function App() {
+
+
      const [open, setopen] = useState(false);
      const [posts, setPosts] = useState([
        {
@@ -40,7 +44,7 @@ function App() {
         onClose={() => setopen(false)}  
       >
     <div style={modalStyle} className={classes.paper}>
-      <h2>I am a modal</h2>
+      <h2>The modal title</h2>
     </div>
       </Modal>
 
