@@ -35,11 +35,11 @@ function App() {
 
   return (
     <div className="App">
-        <Modal
+      <Modal
         open={open}
-        onClose={handleClose}  
+        onClose={() => setopen(false)}  
       >
-        <div style={modalStyle} className={classes.paper}>
+    <div style={modalStyle} className={classes.paper}>
       <h2>I am a modal</h2>
     </div>
       </Modal>
