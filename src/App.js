@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Post from "./Post";
 import { db } from "./firebase";
+import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Modal } from '@material-ui/core';
 
 
 function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
+  const top = 50;
+  const left = 50;
 
   return {
     top: `${top}%`,
@@ -31,9 +32,10 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
 
+     const [modalStyle] = React.useState(getModalStyle);
+     const classes = useStyles();
 
-
-     const [open, setopen] = useState(false);
+     const [open, setOpen] = useState(false);
      const [posts, setPosts] = useState([
        {
         username: "Qazi",
@@ -49,7 +51,7 @@ function App() {
      ]);
 
      useEffect(() => {
-       
+         
      db.collection('posts').onSnapshot(snapshot => {
 
        // every time a new post is added, this code firebase...
@@ -61,11 +63,15 @@ function App() {
      })
      }, [input])
 
+    const signUp = (event) => {
+
+     }
+
   return (
     <div className="App">
       <Modal
         open={open}
-        onClose={() => setopen(false)}  
+        onClose={() => setOpen(false)}  
       >
     <div style={modalStyle} className={classes.paper}>
       <h2>The modal title</h2>
@@ -79,8 +85,10 @@ function App() {
              src="https://cdn.pixabay.com/photo/2016/08/15/01/29/instagram-1594387_960_720.png"
             />
         </div>
-        <h1>let's build a instagram clone here clever programmers</h1>
 
+         <Button onClick={() => setOpen(true)}>Sign up </Button>
+
+        <h1>let's build a instagram clone here clever programmers</h1>
         {
           posts.map( ({id,post}) => (
            <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
