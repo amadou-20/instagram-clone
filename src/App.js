@@ -51,21 +51,15 @@ function App() {
      ]);
 
      useEffect(() => {
-         
-     db.collection('posts').onSnapshot(snapshot => {
 
+     db.collection('posts').onSnapshot(snapshot => {
        // every time a new post is added, this code firebase...
-       setPosts(snapshot.docs.map(doc => ({
-         
+       setPosts(snapshot.docs.map(doc => ({  
         id: doc.id,
       post: doc.data()
       })));
      })
-     }, [input])
-
-    const signUp = (event) => {
-
-     }
+     }, [])
 
   return (
     <div className="App">
@@ -86,7 +80,7 @@ function App() {
             />
         </div>
 
-         <Button onClick={() => setOpen(true)}>Sign up </Button>
+         <Button onClick={() => setOpen(true)}>Sign up</Button>
 
         <h1>let's build a instagram clone here clever programmers</h1>
         {
