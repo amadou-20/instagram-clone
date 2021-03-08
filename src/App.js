@@ -37,23 +37,23 @@ function App() {
 
      const [open, setOpen] = useState(false);
      const [posts, setPosts] = useState([
-       {
-        username: "Qazi",
-        caption: "WOW it works",
-        imageUrl: "https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png"
-       },
+      {
+        username: "Qazi", 
+         caption: "WOW it works", 
+        imageUrl: "https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png",
+      },
 
-       {
-        username: "Jonathan", 
-        caption: "Hello world", 
-        imageUrl: "https://cdn.pixabay.com/photo/2020/10/09/19/39/utah-5641320_960_720.jpg"
-       }
+      {
+        username: "Jonathan",
+         caption: "Hello world",
+        imageUrl: "https://cdn.pixabay.com/photo/2020/10/09/19/39/utah-5641320_960_720.jpg",
+      }
      ]);
 
      useEffect(() => {
 
      db.collection('posts').onSnapshot(snapshot => {
-       // every time a new post is added, this code firebase...
+       // every time a new post is added, this code fires...
        setPosts(snapshot.docs.map(doc => ({  
         id: doc.id,
       post: doc.data()
@@ -83,14 +83,13 @@ function App() {
          <Button onClick={() => setOpen(true)}>Sign up</Button>
 
         <h1>let's build a instagram clone here clever programmers</h1>
-        {
-          posts.map( ({id,post}) => (
-           <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
-          ))
-        }
 
-        <Post username="Qazi" caption="WOW it works" imageUrl="https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png" />
-        <Post username="Jonathan" caption="Hello world" imageUrl="https://cdn.pixabay.com/photo/2020/10/09/19/39/utah-5641320_960_720.jpg" />
+       {
+         posts.map(({id, post}) => ( 
+           <Post  key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
+         ))
+       }
+
     </div>
   );
 }
