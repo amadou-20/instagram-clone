@@ -65,7 +65,7 @@ function App() {
     <div className="App">
       <Modal
         open={open}
-        onClose={() => setOpen(false)}  
+        onClose={() => setOpen(false)}
       >
     <div style={modalStyle} className={classes.paper}>
       <h2>The modal title</h2>
@@ -82,13 +82,18 @@ function App() {
 
          <Button onClick={() => setOpen(true)}>Sign up</Button>
 
-        <h1>let's build a instagram clone here clever programmers</h1>
+        <h1>let's build a instagram clone Here clever programmers</h1>
 
-       {
-         posts.map(({id, post}) => ( 
-           <Post  key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
-         ))
-       }
+        {posts.map( ({id , post})  => (
+              <Post
+                key = {id}
+                postId={id}
+                user={user}
+                username={post.username}
+                caption={post.caption}
+                imgUrl={post.imgUrl}
+              />
+            ))}
 
     </div>
   );
