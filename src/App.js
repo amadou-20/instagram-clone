@@ -37,6 +37,8 @@ function App() {
 
      const [open, setOpen] = useState(false);
      const [username, setUsername] = useState('');
+     const [password, setPassword] = useState('');
+     const [email, setEmail] = useState('');
      const [posts, setPosts] = useState([
       {
         username: "Qazi", 
