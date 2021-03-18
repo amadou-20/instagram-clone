@@ -78,6 +78,20 @@ function App() {
           alt="abc" 
           src="https://cdn.pixabay.com/photo/2016/08/15/01/29/instagram-1594387_960_720.png"
             />
+
+      <Input 
+        placeholder="email"
+        type="text"
+        value={email}
+        onchange={(e) => setEmail(e.target.value)}
+      />
+
+      <Input 
+        placeholder="password"
+        type="password"
+        value={password}
+        onchange={(e) => setPassword(e.target.value)}
+      />
       </center>
     </div>
       </Modal>
