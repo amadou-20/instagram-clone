@@ -36,6 +36,7 @@ function App() {
      const classes = useStyles();
 
      const [open, setOpen] = useState(false);
+     const [username, setUsername] = useState('');
      const [posts, setPosts] = useState([
       {
         username: "Qazi", 
@@ -81,19 +82,14 @@ function App() {
         </div>
 
          <Button onClick={() => setOpen(true)}>Sign up</Button>
-
+         
         <h1>let's build a instagram clone Here clever programmers</h1>
 
-        {posts.map( ({id , post})  => (
-              <Post
-                key = {id}
-                postId={id}
-                user={user}
-                username={post.username}
-                caption={post.caption}
-                imgUrl={post.imgUrl}
-              />
-            ))}
+       {
+           posts.map(({id, post}) => (
+             <Post  username={post.username} caption={post.caption} imageUrl={post.imageUrl} key={id} />
+         ))
+       }
 
     </div>
   );
