@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 import Post from "./Post";
-import { db } from "./firebase";
-import { Button } from '@material-ui/core';
+import { auth, db } from "./firebase";
+import { Button, Input } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Modal } from '@material-ui/core';
 
@@ -39,19 +39,28 @@ function App() {
      const [username, setUsername] = useState('');
      const [password, setPassword] = useState('');
      const [email, setEmail] = useState('');
-     const [posts, setPosts] = useState([
-      {
-        username: "Qazi", 
-         caption: "WOW it works", 
-        imageUrl: "https://blog.desafiolatam.com/wp-content/uploads/2019/04/react-galaxia.png",
-      },
+     const [posts, setPosts] = useState([]);
 
-      {
-        username: "Jonathan",
-         caption: "Hello world",
-        imageUrl: "https://cdn.pixabay.com/photo/2020/10/09/19/39/utah-5641320_960_720.jpg",
+     useEffect(() => {
+      const unsubscribe= auth.onAuthStateChanged((authUser) => {
+        if(authUser){
+          console.log(authUser);  
+          setUser(authUser);
+          if(authUser.displayName){
+  
+          }else{
+            return authUser.updateProfile({
+              displayName: username,
+            });
+          }
+        }else{
+          setUser(null);
+        }
+      })
+      return () => {
+        unsubscribe();
       }
-     ]);
+    },[user , username]);
 
      useEffect(() => {
 
