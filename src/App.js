@@ -93,6 +93,7 @@ function App() {
         onchange={(e) => setPassword(e.target.value)}
       />
       </center>
+        <Button onClick={handlelogin}>Login</Button>
     </div>
       </Modal>
 
