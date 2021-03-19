@@ -78,8 +78,8 @@ function App() {
   return (
     <div className="App">
       <Modal
-        open={open}
-        onClose={() => setOpen(false)}
+        open={openSignIn}
+        onClose={() => setOpenSignIn(false)}
       >
     <div style={modalStyle} className={classes.paper}>
       <h2>The modal title</h2>
@@ -104,7 +104,7 @@ function App() {
         onchange={(e) => setPassword(e.target.value)}
       />
       </center>
-        <Button onClick={signIn}>sign Up</Button>
+        <Button onClick={signIn}>Sign Up</Button>
     </div>
       </Modal>
 
