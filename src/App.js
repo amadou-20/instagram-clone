@@ -36,6 +36,7 @@ function App() {
      const classes = useStyles();
 
      const [open, setOpen] = useState(false);
+     const [openSignIn, setOpenSignIn] = useState('');
      const [username, setUsername] = useState('');
      const [password, setPassword] = useState('');
      const [email, setEmail] = useState('');
@@ -88,7 +89,7 @@ function App() {
           alt="abc" 
           src="https://cdn.pixabay.com/photo/2016/08/15/01/29/instagram-1594387_960_720.png"
             />
-
+            
       <Input 
         placeholder="email"
         type="text"
