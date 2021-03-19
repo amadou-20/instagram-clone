@@ -75,6 +75,18 @@ function App() {
      })
      }, [])
 
+     const signUp = (event) => {
+      event.preventDefault();
+      auth.createUserWithEmailAndPassword(email , password)
+      .then((authUser) => {
+        return authUser.user.updateProfile({
+          displayName: username
+        })
+      })
+      .catch((error) => alert(error.message));
+      setOpen(false);
+    }
+
   return (
     <div className="App">
       <Modal
