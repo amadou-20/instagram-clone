@@ -36,12 +36,12 @@ function App() {
      const classes = useStyles();
 
      const [open, setOpen] = useState(false);
-     const [openSignIn, setOpenSignIn] = useState('');
+     const [openSignIn, setOpenSignIn] = useState(false);
      const [username, setUsername] = useState('');
      const [password, setPassword] = useState('');
      const [email, setEmail] = useState('');
      const [posts, setPosts] = useState([]);
-     const [user, setUser] = useState('');
+     const [user, setUser] = useState(null);
 
      useEffect(() => {
       const unsubscribe= auth.onAuthStateChanged((authUser) => {
@@ -104,7 +104,7 @@ function App() {
         onchange={(e) => setPassword(e.target.value)}
       />
       </center>
-        <Button onClick={handlelogin}>Login</Button>
+        <Button onClick={signIn}>sign Up</Button>
     </div>
       </Modal>
 
